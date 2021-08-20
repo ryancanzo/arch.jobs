@@ -1,0 +1,247 @@
+@media only screen and (min-width: 640px) {
+    .wpforms-indicator {
+        height:76px;
+    }
+
+    #wpforms-group {
+        top: -83px;
+    }
+}
+
+
+@media only screen and (min-width: 768px) {
+    .text-3 {font-size: 64px;/* font-family: Cotham; */font-weight: 300;line-height: 1;}
+    .text-1 {font-size: 32px; font-weight: 300;}
+
+    /* For mobile phones: */
+    
+    #left {
+        top: 50px;
+        width: 50%;
+        left:0;
+    }
+    
+    #right{
+        top: 50px;
+        width: 50%;
+        left:50%;
+        height: calc(100% - 50px);
+    }
+    
+    #tab-bar{
+        display: none;
+    }
+    
+    #map {
+        width: 50%;
+        height: calc(100% - 120px);
+    }
+    
+    #map-single {
+        width: 50%;
+    }
+
+    #right-single {
+        width: 50%;
+    }
+
+    #content{
+        height: calc(100% - 70px);
+    }
+    
+    .hero {
+        font-size:38px;
+    }
+    
+    .sub-footer {
+        font-size: 14x;
+    }
+    /* Menu hider */
+    
+    #menu-controls {display: none;}
+
+    #menu {
+        display: block;
+        position: relative;
+        top: 0;
+        background-color: none;
+        padding: 0;
+        width: auto;
+        border-top: none;
+    }
+    .menu-icon {
+    height: 18px;
+    float: right;
+    }
+
+    .menu {
+        height: calc(100% - 20px);
+    }
+
+    .menu-link-dark {
+        /* border-left: 1px solid #464646; */
+        padding: 10px;
+        opacity: 1;
+        /* font-weight: 700; */
+    }
+    
+    .menu-link {
+        padding: 16px 11px 16px 11px;
+        opacity: 1;
+    }
+
+    .menu-link-dark:hover {
+        /* color: aquamarine; */
+        background-color: #464646;
+    }
+
+    .menu-link-light:hover {
+        color: white;
+        background-color: #555;
+    }
+    
+    .page-active {
+        color: white;
+        background-color: #555;     
+    }
+    
+    .menu-item {
+        float: right;
+        z-index: 1234;
+    }
+
+    .x-icon {display: none;}
+
+    .post-job {
+        background-color: #4c72ff;
+        color: #fff;
+    }
+
+    .post-job:hover {
+        background-color: #4363db;
+    }
+
+    #site-title {
+        opacity: 1;
+        text-decoration: underline;
+        text-decoration-color: aquamarine;
+        -webkit-text-decoration-color: aquamarine;
+        margin-left: 10px;
+        float:left;
+        font-size:16px;
+    }
+
+    /* Menu hider */
+
+    .page-content {
+        max-width: 1200px;
+        margin: auto;
+        font-size: 24px;
+        line-height: 1.4;
+    }
+
+    
+    .mapboxgl-ctrl-geocoder input[type='text'] {
+        font-size: 24px;
+        height: 70px;
+        padding-left: 60px;
+    }
+    
+    .mapboxgl-ctrl-geocoder .geocoder-icon-search {
+        top: 26px;
+        left: 22px;
+    }
+    
+    .mapboxgl-ctrl-geocoder .geocoder-pin-right * {
+        right: 25px;
+        top: 25px;
+    }
+    
+    /* Mapbox search suggestions text */
+    .mapboxgl-ctrl-geocoder ul > li > a {
+        padding: 23px 58px;
+        font-size: 24px;
+    }
+    
+    #left-search {
+        height: 70px;
+    }
+
+    #right-search {
+        height: 70px;
+    }
+    
+    #spinner {
+        top:50%;
+    }
+    
+/* Listings ________________________________________________________________________________________________________________________ */
+
+    .listings {
+        padding: 50px 50px 15px 60px ;
+    }
+    
+    
+    .job {
+        margin: 0;
+        margin-bottom: 50px;
+        font-size:24px;
+        width: 100%;
+    }
+    
+    .empty {
+        margin: 0;
+        margin-bottom: 30px;
+    }
+    
+
+    .jtext {
+        width: calc(100% - 120px);
+    }
+    
+    .listing-text {
+        font-size: 24px;
+    }
+    
+    .jimg {
+        width: auto;
+        height: auto;
+    }
+
+    .jimg-container {
+        float: right;
+        width: 100px;
+        height: 70px;
+        margin-top:5px;
+    }
+
+    .source {
+        margin-top: 5px;
+        padding-top: 5px;
+        font-size: 16px;
+        display: inline-block;
+    }
+    
+    /* Single pages */
+    
+    #page-content {
+        padding-top: 25px;
+    }
+    
+    .job-data-item {
+        display: inline-block;
+        margin-bottom: 0;
+    }
+    .job-data-group {
+        display: inline-block;
+    }
+    #apply-button {
+    margin-top: 0;
+    margin-bottom: 0;
+    }
+    
+    input[type=text], input[type=password] {
+        width: 350px;
+    }
+
+  

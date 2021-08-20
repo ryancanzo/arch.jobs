@@ -1,24 +1,77 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://ogp.me/ns/fb#">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
-    <title>arch.jobs</title>
-    <meta name="description" content="arch.jobs">
-    <meta name="author" content="arch.jobs">
-
-    <meta property="og:title" content="arch.jobs">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://arch.jobs">
-    <meta property="og:description" content="arch.jobs">
-    <meta property="og:image" content="media/icons/og-image.jpg">
-
-    <link rel="icon" type="image/png" sizes="128x128" href="media/icons/favicon.png">
-    
-    <link rel="stylesheet" href="styles.css?v=1.0">
+    <meta charset='utf-8' />
+    <title>Architecture Jobs — arch.jobs</title>
+    <meta name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no' />
+    <meta name="description" content="arch.jobs is a map-based search engine for architecture and design jobs. Use the map to browse opportunities around the corner or across the world"/>
+    <meta property="" ...>
+    <meta property="og:image" content="/img/preview-og.jpg" />
+    <!-- Google Analytics -->
+    <script>
+		window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+		ga('create', 'UA-49332740-4', 'auto');
+		ga('send', 'pageview');
+    </script>
+    <script async src='https://www.google-analytics.com/analytics.js'></script>
+    <!-- End Google Analytics -->
+    <link rel="icon" href="/img/favicon.png" />
+    <script src='https://api.mapbox.com/mapbox-gl-js/v0.45.0/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v0.45.0/mapbox-gl.css' rel='stylesheet' />
+    <link href="/style.css" rel='stylesheet' />
+    <link href="/styleb.css" rel='stylesheet' />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 </head>
 <body>
-    <script src="js/scripts.js"></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v2.2.0/mapbox-gl-geocoder.min.js'></script>
+
+<div id="top-index" class="top">
+    <div id='header' class="header-dark">
+        <a id="site-title" class="menu" href="/">arch.jobs</a>
+        <!--<div id="header-message" class="menu">BETA</div>-->
+        <div id="menu-controls">
+            <div id="m-button"><img class="hamburger-icon menu-icon" src="/img/menu.png"></div>
+            <div id="x-button"><img class="x-icon menu-icon" src="/img/x.png"></div>
+        </div>
+        <!--<div id="menu" >
+            <a class="menu-link menu-item" href="#"></a>
+        </div>-->
+    </div>
+    <div id="tab-bar">
+        <div id="tab-left" class="tab"><div class="header-text" onclick="ga('send', 'event', 'UI', 'Map Tab Click');">Location</div></div>
+        <div id="tab-right" class="tab tab-selected aquamarine"><div class="header-text" onclick="ga('send', 'event', 'UI', 'Listings Tab Click');">Listings</div></div>
+    </div>
+</div>
+    
+<div id="left">
+    <div id="left-slider">
+        <div id='left-search'>
+            <div id='geocoder' class='geocoder'></div>
+        </div>
+        <div id='map'></div>
+    </div>
+</div>  
+
+<div id="right">
+	<div id='right-search'>
+		<div id="filter" class="geocoder"><div class="mapboxgl-ctrl-geocoder mapboxgl-ctrl"><span class="geocoder-icon geocoder-icon-search"></span><input id="feature-filter" class="filter aquamarine" type="text" placeholder="Job"><div class="geocoder-pin-right"><!--<span id="spinner" class="geocoder-icon geocoder-icon-loading"></span>--><button id="right-x" class="geocoder-icon geocoder-icon-close" aria-label="Clear"></button></div></div></div>
+	</div>
+	<div id="content">
+		<!-- this spinner breaks map dragging/panning on mobile when style is put in external css but works when inline, no idea why -->
+		<div id="spinner-div">
+			<span id="spinner" class="spinner-icon-loading spinner-icon initial-load-spinner" style="display:none;position: absolute;"></span>
+		</div>
+
+		<div class='map-overlay'>
+			<div id='featured-listings' class='listings'></div>
+		</div>
+
+		<div id="intro">
+		</div>
+	</div>
+</div>
+    
+<script src="/archjobs.js?v=3"></script>
+    
 </body>
 </html>
